@@ -1,7 +1,7 @@
 SICP Solutions
 ==============
 
-My solutions to the exercises found in the **Structure and Interpretation of
+My solutions to (some of) the exercises found in the **Structure and Interpretation of
 Computer Programs (SICP)** MIT course.
 
 You will need [MIT/GNU Scheme](http://www.gnu.org/software/mit-scheme/) to run the solutions.
