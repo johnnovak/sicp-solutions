@@ -23,6 +23,8 @@
   (test-carmichael-iter (- n 1))) 
 
 
+; Tests
+
 (test-carmichael 561)   ; true
 (test-carmichael 1105)  ; true
 (test-carmichael 1729)  ; true
