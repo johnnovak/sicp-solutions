@@ -1,5 +1,5 @@
-; Demonstrate that the Carmichael numbers listed really do fool the Fermat
-; test
+;; Demonstrate that the Carmichael numbers listed really do fool the Fermat
+;; test
 
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
@@ -23,12 +23,12 @@
   (test-carmichael-iter (- n 1))) 
 
 
-; Tests
+;;; Tests
 
-(test-carmichael 561)   ; true
-(test-carmichael 1105)  ; true
-(test-carmichael 1729)  ; true
-(test-carmichael 2465)  ; true
-(test-carmichael 2821)  ; true
-(test-carmichael 6601)  ; true
+(test-carmichael 561)       ; true
+(test-carmichael 1105)      ; true
+(test-carmichael 1729)      ; true
+(test-carmichael 2465)      ; true
+(test-carmichael 2821)      ; true
+(test-carmichael 6601)      ; true
 

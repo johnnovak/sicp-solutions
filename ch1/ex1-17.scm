@@ -1,5 +1,5 @@
-; Calculate the product of two numbers in a logarithmic number of steps using
-; the double and halve procedures
+;; Calculate the product of two numbers in a logarithmic number of steps using
+;; the double and halve procedures
 
 (define (double x)
   (* x 2))

@@ -1,5 +1,5 @@
-; Calculate the square root of a given number by means of successive
-; approximations using Heron of Alexandria's method
+;; Calculate the square root of a given number by means of successive
+;; approximations using Heron of Alexandria's method
 
 (define (average x y)
   (/ (+ x y) 2))

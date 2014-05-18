@@ -1,4 +1,4 @@
-; Calculate the sum of squares of the two largest numbers out of three
+;; Calculate the sum of squares of the two largest numbers out of three
 
 (define (square x) (* x x))
 

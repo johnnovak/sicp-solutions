@@ -1,4 +1,4 @@
-; Calculate the numerical integral of a given function using Simpson's Rule
+;; Calculate the numerical integral of a given function using Simpson's Rule
 
 (define (sum term a next b)
   (if (> a b)
@@ -26,7 +26,7 @@
   (* (/ (h) 3) (sum fy 0 inc n)))
 
 
-; Tests
+;;; Tests
 
 (integral cube 0 1 0.01)                ; .24998750000000042
 (simpson-integral cube 0.0 1.0 100)     ; .24999999999999992

@@ -1,4 +1,4 @@
-; Calculate an element of Pascal's triangle using a recursive process
+;; Calculate an element of Pascal's triangle using a recursive process
 
 (define (pascal row col)
   (if (or (= col 0) (= col row))
@@ -6,7 +6,8 @@
       (+ (pascal (- row 1) (- col 1))
          (pascal (- row 1) col))))
 
-; Tests
+
+;;; Tests
 
 (pascal 0 0)    ; 1
 (pascal 1 0)    ; 1

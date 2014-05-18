@@ -1,7 +1,7 @@
-; f(n) = n, if n<3
-; f(n) = f(n - 1) + 2f(n - 2) + 3f(n - 3), if n> 3
+;; f(n) = n, if n<3
+;; f(n) = f(n - 1) + 2f(n - 2) + 3f(n - 3), if n> 3
 
-; Compute f(n) by means of a recursive process
+;; Compute f(n) by means of a recursive process
 
 (define (f-recur n)
   (if (< n 3)
@@ -11,7 +11,7 @@
          (* 3 (f-recur (- n 3))))))
 
 
-; Compute f(n) by means of an iterative process
+;; Compute f(n) by means of an iterative process
 
 (define (f-iter n)
   (define (f f1 f2 f3 curr)

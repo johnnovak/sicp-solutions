@@ -1,4 +1,4 @@
-; Rewrite the 'sum' procedure so that the sum is performed iteratively
+;; Rewrite the 'sum' procedure so that the sum is performed iteratively
 
 (define (inc x)
   (+ x 1))
@@ -17,7 +17,7 @@
   (iter a 0))
 
 
-; Tests
+;;; Tests
 
 (sum square 5 inc 11)           ; 476
 (sum-iter square 5 inc 11)      ; 476

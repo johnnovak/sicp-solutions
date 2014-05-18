@@ -1,6 +1,5 @@
-; Write an even more general version of accumulate (exercise 1.32) by
-; introducing the notion of a filter on the terms to be combined.
-
+;; Write an even more general version of accumulate (exercise 1.32) by
+;; introducing the notion of a filter on the terms to be combined.
 
 (define (filtered-accumulate combiner filter null-value term a next b)
   (define (iter acc a)
@@ -11,7 +10,7 @@
   (iter null-value a))
 
 
-; a) the sum of the squares of the prime numbers in the interval a to b
+;; a) the sum of the squares of the prime numbers in the interval a to b
 
 (define (smallest-divisor n)
   (find-divisor n 2))
@@ -34,8 +33,8 @@
   (filtered-sum prime? square a 1+ b))
 
 
-; b) the product of all the positive integers less than n that are relatively
-; prime to n (i.e., all positive integers i < n such that GCD(i,n) = 1).
+;; b) the product of all the positive integers less than n that are relatively
+;; prime to n (i.e., all positive integers i < n such that GCD(i,n) = 1).
 
 (define (gcd a b)
   (if (= b 0)
@@ -52,7 +51,7 @@
   (filtered-product relative-prime? identity 1 1+ (- n 1)))
 
 
-; Tests
+;;; Tests
 
 (sum-prime-squares 2 3)             ; 13
 (sum-prime-squares 10 50)           ; 55330
