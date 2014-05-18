@@ -1,4 +1,4 @@
-;; Compute the golden ratio f(x) = 1 + 1/x by means of the fixed-point procedure
+;; Compute the golden ratio f(x) = 1 + 1/x by means of the fixed-point procedure.
 
 (define tolerance 1e-20)
 

@@ -1,4 +1,4 @@
-;; Rewrite the 'sum' procedure so that the sum is performed iteratively
+;; Rewrite the 'sum' procedure so that the sum is performed iteratively.
 
 (define (inc x)
   (+ x 1))

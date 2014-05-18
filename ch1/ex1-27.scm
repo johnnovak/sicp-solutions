@@ -1,5 +1,5 @@
 ;; Demonstrate that the Carmichael numbers listed really do fool the Fermat
-;; test
+;; test.
 
 (define (expmod base exp m)
   (cond ((= exp 0) 1)

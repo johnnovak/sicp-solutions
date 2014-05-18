@@ -1,4 +1,4 @@
-;; Calculate the numerical integral of a given function using Simpson's Rule
+;; Calculate the numerical integral of a given function using Simpson's Rule.
 
 (define (sum term a next b)
   (if (> a b)

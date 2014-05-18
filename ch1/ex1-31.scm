@@ -1,5 +1,5 @@
 ;; Write a procedure called 'product' that returns the product of the values
-;; of a function at points over a given range
+;; of a function at points over a given range.
 
 (define (inc x) (+ x 1))
 

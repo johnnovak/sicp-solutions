@@ -5,7 +5,7 @@
 ;; 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, ...
 ;;
 ;; The result of this continued fraction expansion will be e - 2, where e is
-;; the base of the natural logarithms
+;; the base of the natural logarithms.
 
 (define (cont-frac n d k)
   (define (iter i)
@@ -24,6 +24,9 @@
                                 (* (+ (/ (- i 2) 3) 1) 2)
                                 1))
                 k)))
+
+
+;;; Tests
 
 (approx-e 10)         ; 2.7182817182817183
 (approx-e 100)        ; 2.7182818284590455
