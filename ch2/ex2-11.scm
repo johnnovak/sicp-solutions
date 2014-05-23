@@ -19,46 +19,37 @@
 
     (cond ((and (positive? a) (positive? b))
            (cond ((and (positive? c) (positive? d))
-                  (make-interval (* (min a b) (min c d))
-                                 (* (max a b) (max c d))))
+                  (make-interval (* a c) (* b d)))
                  ((and (negative? c) (negative? d))
-                  (make-interval (* (max a b) (min c d))
-                                 (* (min a b) (max c d))))
+                  (make-interval (* b c) (* a d)))
                  (else
-                  (make-interval (* (max a b) (min c d))
-                                 (* (max a b) (max c d))))))
+                  (make-interval (* b c) (* b d)))))
 
           ((and (negative? a) (negative? b))
            (cond ((and (positive? c) (positive? d))
-                  (make-interval (* (min a b) (max c d))
-                                 (* (max a b) (min c d))))
+                  (make-interval (* a d) (* b c)))
                  ((and (negative? c) (negative? d))
-                  (make-interval (* (max a b) (max c d))
-                                 (* (min a b) (min c d))))
+                  (make-interval (* b d) (* a c)))
                  (else
-                  (make-interval (* (min a b) (max c d))
-                                 (* (min a b) (min c d))))))
+                  (make-interval (* a d) (* a c)))))
 
           ((and (positive? c) (positive? d))
            (cond ((and (negative? c) (negative? d))
-                  (make-interval (* (min a b) (max c d))
-                                 (* (max a b) (min c d))))
+                  (make-interval (* a d) (* b c)))
                  (else
-                  (make-interval (* (min a b) (max c d))
-                                 (* (max a b) (max c d))))))
+                  (make-interval (* a d) (* b d)))))
 
           ((and (negative? c) (negative? d))
            (cond ((and (positive? c) (positive? d))
-                  (make-interval (* (max a b) (min c d))
-                                 (* (min a b) (max c d))))
+                  (make-interval (* b c) (* a d)))
                  (else
-                  (make-interval (* (max a b) (min c d))
-                                 (* (min a b) (min c d))))))
+                  (make-interval (* b c) (* a c)))))
 
           (else (mul-interval x y)))))
 
 
-(define (make-interval a b) (cons a b))
+(define (make-interval a b)
+  (if (< a b) (cons a b) (cons b a)))
 
 (define (lower-bound i)
   (car i))
